@@ -1,6 +1,8 @@
 #include "main.h"
 /**
-* positive_or_negative - Positive or negative
+* positive_or_negative -Variable i Positive or negative
+* @i: integer
+* Return: 0
 */
 void positive_or_negative(int i)
 {
