@@ -1,11 +1,11 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _putchar - check the code.
  * @c: the character to print
- * Return: Always 0.
- * on error, -1 is returned, and si set appropriately.
+ * Return: on Success 1.
+ * on error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c)
 {
