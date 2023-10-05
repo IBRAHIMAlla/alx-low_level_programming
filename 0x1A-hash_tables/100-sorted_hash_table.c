@@ -43,11 +43,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
 	v = strdup(value);
 	if (v == NULL)
 		return (0);
-
 	d = key_index((const unsigned char *)key, ht->size);
 	mpt = ht->shead;
 	while (mpt)
@@ -80,8 +78,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (ht->shead == NULL)
 	{
-		nw->sprev = NULL;
-		nw->snext = NULL;
+		nw->sprev = NULL; nw->snext = NULL;
 		ht->shead = nw;
 		ht->stail = nw;
 	}
@@ -102,7 +99,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		if (mpt->snext == NULL)
 			ht->stail = nw;
 		else
-			tmp->snext->sprev = new;
+			tmp->snext->sprev = nw;
 		mpt->snext = nw;
 	}
 
