@@ -3,8 +3,9 @@
 5-island_perimeter module
 """
 
+
 def island_perimeter(grid):
-    """function returns the perimeter of the island described in grid"""
+    """returns the perimeter of the island described in grid"""
     dim = 0
 
     for m in range(len(grid)):
